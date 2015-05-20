@@ -27,6 +27,9 @@ To run you need a compatible C compiler. Please see
 2. Download and save the [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) in the example folder. 
 3. Run the exampleRunFile.m file to and compare its displacement outputs to the contour plots in the referenced paper ([Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst))
 
+## Health warning!
+FIDVC requires a 3D stack to be read in, which depending on the volume size can require a **large amount of RAM** in Matlab.
+
 # Files
 * Main files
  - addDisplacements.m
@@ -50,5 +53,10 @@ To run you need a compatible C compiler. Please see
  - exampleRunFile.m
  - [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) (vol00.mat & vol01.mat).
 
-## Health warning!
-FIDVC requires a 3D stack to be read in, which depending on the volume size can require a **large amount of RAM** in Matlab.
+# Cite
+If used please cite:
+[Bar-Kochba E., Toyjanova J., Andrews E., Kim K., Franck C. (2014) A fast iterative digital volume correlation algorithm for large deformations. Experimental Mechanics. doi: 10.1007/s11340-014-9874-2](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst)
+
+
+# Contact and support
+For questions, please first refer to [FAQ](https://github.com/FranckLab/FIDVC#FAQ) and [Questions/Issues](https://github.com/FranckLab/FIDVC/issues). Add a new question if similar issue hasn't been reported. We shall help you at the earliest. The author's contact information can be found at [Franck Lab](http://franck.engin.brown.edu).
