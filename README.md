@@ -22,18 +22,33 @@ To run you need a compatible C compiler. Please see
 * We recommend that the input image stack at each dimension should have at least 1.5 times of the subset size as the number of pixels. The default subset size is 128x128x64, so we recommend that the minimum input volume size should be 192x192x96.
 * The size of the input image stack should be divisible by 0.5 times the size of the subset. 
 
-## Steps
+## Running including example case
+1. Make sure that the main files and the supplemental m files (from file exchange) are added to the path in Matlab.
+2. Download and save the [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) in the example folder. 
+3. Run the exampleRunFile.m file to and compare its displacement outputs to the contour plots in the referenced paper ([Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst))
 
+# Files
+* Main files
+ - addDisplacements.m
+ - checkConvergenceSSD.m
+ - DVC.m
+ - filterDisplacements.m
+ - funIDVC.m
+ - IDVC.m
+ - removeOutliers.m
+ - volumeMapping.m
 
-Main files:
-addDisplacements.m
-checkConvergenceSSD.m
-DVC.m
-filterDisplacements.m
-funIDVC.m
-IDVC.m
-removeOutliers.m
-volumeMapping.m
+* Supplement m files from the MATLAB file exchange:
+ - gridfit.m
+ - inpaint_nans.m
+ - inpaint_nans3.m
+ - mirt3D_mexinterp.cpp
+ - mirt3D_mexinterp.m
+ - mirt3D_mexinterp.mexw64
+
+* Example Run files
+ - exampleRunFile.m
+ - [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) (vol00.mat & vol01.mat).
 
 ## Health warning!
-The DVC simulator requires a 3D stack to be read in, which depending on the volume size can require a **large amount of RAM** in Matlab, and thus when running the simulator from a laptop, we strongly suggest to use the resize option within the GUI to decrease the total stack dimensions. My macbook air can only handle 128 x 128 x 96 sufficiently. 
+FIDVC requires a 3D stack to be read in, which depending on the volume size can require a **large amount of RAM** in Matlab.
