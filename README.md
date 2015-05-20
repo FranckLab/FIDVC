@@ -5,6 +5,7 @@ The Fast Iterative Digital Volume Correlation Algorithm (FIDVC) is the next gene
 * [Example data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip)
 * [FAQ](https://github.com/FranckLab/FIDVC/blob/master/README.md#faq)
 * [Questions/Issues](https://github.com/FranckLab/FIDVC/issues)
+* [Bug Fixes/history](https://github.com/FranckLab/FIDVC/wiki/Bug-Fixes!)
 * [Franck Lab](http://franck.engin.brown.edu)
  
 # Purpose
