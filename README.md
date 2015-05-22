@@ -58,6 +58,16 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 If used please cite:
 [Bar-Kochba E., Toyjanova J., Andrews E., Kim K., Franck C. (2014) A fast iterative digital volume correlation algorithm for large deformations. Experimental Mechanics. doi: 10.1007/s11340-014-9874-2](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst)
 
+```
+@article{bar2014fast,
+  title={A fast iterative digital volume correlation algorithm for large deformations},
+  author={Bar-Kochba, E and Toyjanova, J and Andrews, E and Kim, K-S and Franck, C},
+  journal={Experimental Mechanics},
+  pages={1--14},
+  year={2014},
+  publisher={Springer}
+}
+```
 
 # Contact and support
 For questions, please first refer to [FAQ](https://github.com/FranckLab/FIDVC#FAQ) and [Questions/Issues](https://github.com/FranckLab/FIDVC/issues). Add a new question if similar issue hasn't been reported. We shall help you at the earliest. The author's contact information can be found at [Franck Lab](http://franck.engin.brown.edu).
