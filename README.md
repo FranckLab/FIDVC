@@ -78,5 +78,5 @@ If used please cite:
 }
 ```
 
-# Contact and support
+## Contact and support
 For questions, please first refer to [FAQ](https://github.com/FranckLab/FIDVC#faq) and [Questions/Issues](https://github.com/FranckLab/FIDVC/issues). Add a new question if similar issue hasn't been reported. We shall help you at the earliest. The author's contact information can be found at [Franck Lab](http://franck.engin.brown.edu).
