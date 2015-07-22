@@ -23,7 +23,7 @@ To run you need a compatible C compiler. Please see
 * We recommend that the input image stack at each dimension should have at least 1.5 times of the subset size as the number of pixels. The default subset size is 128x128x64, so we recommend that the minimum input volume size should be 192x192x96.
 * The size of the input image stack should be divisible by 0.5 times the size of the subset. 
 
-## Running including example case
+## Running included example case
 1. Make sure that the main files and the supplemental m files (from file exchange) are added to the path in Matlab.
 2. Download and save the [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) in the example folder. 
 3. Run the exampleRunFile.m file to and compare its displacement outputs to the contour plots in the referenced paper ([Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst))
@@ -53,6 +53,15 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 * Example Run files
  - exampleRunFile.m
  - [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) (vol00.mat & vol01.mat).
+
+## FAQ
+**What are the requirements for the input 3D image stack?**
+
+Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab/FIDIC#running-including-example-case).
+
+**Can I use FIDVC for finding displacement fields in 2D images?**
+
+No. But you can use [FIDIC](https://github.com/FranckLab/FIDIC), this is 2D version of FIDVC for finding displacments in 2D images. 
 
 # Cite
 If used please cite:
