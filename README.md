@@ -57,7 +57,7 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 ## FAQ
 **What are the requirements for the input 3D image stack?**
 
-Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab/FIDVC#running-including-example-case).
+Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab/FIDVC/blob/master/README.md#input-3d-image-stack-requirements).
 
 **Can I use FIDVC for finding displacement fields in 2D images?**
 
