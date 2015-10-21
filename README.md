@@ -52,7 +52,7 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 
 * Example Run files
  - exampleRunFile.m
- - [example volume data]https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing) (vol00.mat, vol01.mat, resultsFIDVC.mat, outputREsults.pdf, matlab_workspace.mat).
+ - [example volume data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing) (vol00.mat, vol01.mat, resultsFIDVC.mat, outputREsults.pdf, matlab_workspace.mat).
 
 ## FAQ
 **What are the requirements for the input 3D image stack?**
