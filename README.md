@@ -2,7 +2,7 @@ The Fast Iterative Digital Volume Correlation Algorithm (FIDVC) is the next gene
 
 ### Important pages
 * [Download latest version v1.1!](https://github.com/FranckLab/FIDVC/releases)
-* [Example data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip)
+* [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing)
 * [FAQ](https://github.com/FranckLab/FIDVC/blob/master/README.md#faq)
 * [Questions/Issues](https://github.com/FranckLab/FIDVC/issues)
 * [Bug Fixes/history](https://github.com/FranckLab/FIDVC/wiki/Bug-Fixes!)
@@ -25,7 +25,7 @@ To run you need a compatible C compiler. Please see
 
 ### Running included example case
 1. Make sure that the main files and the supplemental m files (from file exchange) are added to the path in Matlab.
-2. Download and save the [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) in the example folder. 
+2. Download and save the [example volume data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing) in the example folder. 
 3. Run the exampleRunFile.m file to and compare its displacement outputs to the contour plots in the referenced paper ([Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst))
 
 ### Health warning!
@@ -52,7 +52,7 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 
 * Example Run files
  - exampleRunFile.m
- - [example volume data](http://franck.engin.brown.edu/~christianfranck/FranckLab/downloads/FIDVC.zip) (vol00.mat & vol01.mat).
+ - [example volume data]https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing) (vol00.mat, vol01.mat, resultsFIDVC.mat, outputREsults.pdf, matlab_workspace.mat).
 
 ## FAQ
 **What are the requirements for the input 3D image stack?**
