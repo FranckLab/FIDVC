@@ -3,7 +3,7 @@ The Fast Iterative Digital Volume Correlation Algorithm (FIDVC) is the next gene
 ### Important pages
 * [Download latest version v1.2!](https://github.com/FranckLab/FIDVC/releases)
 * [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing)
-* [FAQ](https://github.com/FranckLab/FIDVC/blob/master/README.md#faq)
+* [FAQ](https://github.com/FranckLab/FIDVC#faq)
 * [Questions/Issues](https://github.com/FranckLab/FIDVC/issues)
 * [Bug Fixes/history](https://github.com/FranckLab/FIDVC/wiki/Bug-Fixes!)
 * [Franck Lab](http://franck.engin.brown.edu)
@@ -57,7 +57,7 @@ FIDVC requires a 3D stack to be read in, which depending on the volume size can 
 ## FAQ
 **What are the requirements for the input 3D image stack?**
 
-Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab/FIDVC/blob/master/README.md#input-3d-image-stack-requirements).
+Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab/FIDVC#input-3d-image-stack-requirements).
 
 **Can I use FIDVC for finding displacement fields in 2D images?**
 
