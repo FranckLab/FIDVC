@@ -283,7 +283,9 @@ ccMask = double(cc >= ccThreshold);
 
 CC = bwconncomp(~ccMask);
 [~,idx] = max(cellfun(@numel,CC.PixelIdxList));
-ccMask(CC.PixelIdxList{idx}) = inf;
+if ~isempty(idx)
+    ccMask(CC.PixelIdxList{idx}) = inf;
+end
 ccMask(cc == 0) = nan;
 ccMask(~isfinite(ccMask)) = 0;
 cc = cc.*ccMask;
