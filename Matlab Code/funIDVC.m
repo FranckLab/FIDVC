@@ -65,11 +65,10 @@ for i = 2:numImages % Reads Volumes Starting on the Second Volumes
     [u_, cc{i-1}, dm] = IDVC(I,sSize0,u_);
     
     % Saving iterations of the DVC
-    u{i-1}{1} = u_{1};  u{i-1}{2} = u_{2};  u{i-1}{3} = u_{3}; u{i-1}{4} = u_{4};
+    u{i-1}{1} = -u_{1};  u{i-1}{2} = -u_{2};  u{i-1}{3} = -u_{3}; u{i-1}{4} = u_{4};
     
-    u_ = num2cell(zeros(1,3));
-    if strcmpi(incORcum(1),'i'); I{1} = I{2};
-    else u_ = u{i-1}(1:3);
+    if strcmpi(incORcum(1),'i'); I{1} = I{2}; u_ = num2cell(zeros(1,3));
+    else u_ = u_(1:3);
     end
     
     disp(['Elapsed Time for all iterations: ',num2str(toc(tStart))]);
