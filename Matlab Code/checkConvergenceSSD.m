@@ -72,6 +72,7 @@ if iteration > 1 % skip before first displacement estimation
     if prod(single(sSpacing1 == 16)) % condition if spacing = 16
       
         idx = (find(prod(single(sSpacing == 16),2))-1):iteration;
+        idx = idx(idx~=0);
         if length(idx) > 2
             dSSE = diff(SSE(idx)); % calculate difference
             dSSE = dSSE/dSSE(1); % normalize difference
