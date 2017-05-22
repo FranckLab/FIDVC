@@ -215,7 +215,7 @@ function varargout = generateMTF(sSize)
 
 %% equation 4
 
-if prod(single(sSize == 32))
+if prod(single(sSize == 32)) || prod(single(sSize == 64)) || prod(single(sSize == 128))
     sSize = sSize(1);
     
     x = cell(1,3);
