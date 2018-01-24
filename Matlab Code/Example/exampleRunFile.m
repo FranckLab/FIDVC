@@ -51,6 +51,9 @@
 %         u{time}{2} = displacement in y-direction at t=time of size MxNxP
 %         u{time}{3} = displacement in z-direction at t=time of size MxNxP
 %   cc: peak values of the cross-correlation for each interrogation
+%   dm: meshgrid spacing (8 by default)
+%   m:  The grid points at which displacements are computed. The grid 
+%        points locations are in the same format as 'u'.
 % 
 % NOTES
 % -------------------------------------------------------------------------
@@ -69,7 +72,7 @@ incORcum = 'incremental';
 filename = 'vol*.mat';
 
 % Estimate displacements via IDVC
-[u, cc, dm] = funIDVC(filename, sSize, incORcum);
+[u, cc, dm, m] = funIDVC(filename, sSize, incORcum);
 
 save('resultsFIDVC.mat','u','cc','dm');
 

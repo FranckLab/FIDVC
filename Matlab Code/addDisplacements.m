@@ -1,4 +1,4 @@
-function [u, du, cc] = addDisplacements(u0,du0,cc0,m0,dm)
+function [u, du, cc, m] = addDisplacements(u0,du0,cc0,m0,dm)
 % u = addDisplacements(u,thr,epsilon) removes outliers using the universal
 % outlier test based on
 %
