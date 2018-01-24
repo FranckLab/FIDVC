@@ -1,7 +1,7 @@
 The Fast Iterative Digital Volume Correlation Algorithm (FIDVC) is the next generation DVC algorithm providing significantly improved signal-to-noise, and large (finite) deformation (incl. large rotations and image stretches) capture capability at low computational cost (please see [Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst) for more details).
 
 ### Important pages
-* [Download latest version v1.2.3!](https://github.com/FranckLab/FIDVC/releases)
+* [Download latest version v1.2.4!](https://github.com/FranckLab/FIDVC/releases)
 * [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing)
 * [FAQ](https://github.com/FranckLab/FIDVC#faq)
 * [Questions/Issues](https://github.com/FranckLab/FIDVC/issues)
