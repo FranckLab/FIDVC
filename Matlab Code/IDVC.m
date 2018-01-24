@@ -1,4 +1,4 @@
-function [u, cc, dm] = IDVC(varargin)
+function [u, cc, dm, m] = IDVC(varargin)
 % [u, cc] = IDVC(I,sSize,u0,className);
 % I = filterDisplacements(I0,filterSize,z) applies a low-pass convolution
 % filter to the displacement field to mitigate divergence based on 
@@ -25,6 +25,8 @@ function [u, cc, dm] = IDVC(varargin)
 %         u{4} = magnitude
 %   cc: peak values of the cross-correlation for each interrogation
 %   dm: meshgrid spacing (8 by default)
+%   m:  The grid points at which displacements are computed. The grid 
+%       points locations are in the same format as 'u'.
 %
 % NOTES
 % -------------------------------------------------------------------------
@@ -60,6 +62,8 @@ while ~converged01 && i - 1 < maxIterations
      [converged01, SSE(i-1) , sSize(i,:), sSpacing(i,:)] = checkConvergenceSSD(I,SSE,sSize,sSpacing,convergenceCrit);
 
     if ~converged01
+        finalSize = sSize(i,:);
+        
         [I, m] = parseImages(I,sSize(i,:),sSpacing(i,:));
         
         % run cross-correlation to get an estimate of the displacements
@@ -67,7 +71,7 @@ while ~converged01 && i - 1 < maxIterations
         
         % add the displacements from previous iteration to current
         waitbar(3/7,wb,'Adding displacements from previous iteration');
-        [u, ~, cc] = addDisplacements(u,du,cc,m,dm);
+        [u, ~, cc, mFinal] = addDisplacements(u,du,cc,m,dm);
         
         % filter the  displacements using a predictor filter
         waitbar(4/7,wb,'Filtering Displacements');
@@ -87,11 +91,11 @@ while ~converged01 && i - 1 < maxIterations
         disp(['Elapsed time (iteration ',num2str(i-1),'): ',num2str(toc(ti))]);
         i = i + 1;
     end
-    
+
 end
 
-[u,cc] = parseOutputs(u,cc,dm,padSize);
-
+[u,cc,m] = parseOutputs(u,cc,finalSize,padSize,mFinal);
+delete(wb);
 disp(['Convergence at iteration ',num2str(i)]);
 disp(['Title time: ',num2str(toc(t0))]);
 end
@@ -167,22 +171,27 @@ varargout{end+1} = u0;
 end
 
 
-function [u,cc] = parseOutputs(u,cc,filterSpacing,padSize)
+function [u,cc,m] = parseOutputs(u,cc,finalsSize,padSize,m)
 % parses outputs and unpads the displacment field and cc.
 
-unpadSize(1,:) = ceil(padSize(1,:)/filterSpacing);
-unpadSize(2,:) = floor((padSize(2,:)+1)/filterSpacing); 
-% +1 from the extra meshgrid point during the meshing of the DVC algorithm. EBK (10-23-2013)
-
-for i = 1:3
-    u{i} = u{i}(1+unpadSize(1,1):end-unpadSize(2,1),...
-        1+unpadSize(1,2):end-unpadSize(2,2),...
-        1+unpadSize(1,3):end-unpadSize(2,3));
-end
+% % % % unpadSize(1,:) = ceil(padSize(1,:)/filterSpacing);
+% % % % unpadSize(2,:) = floor((padSize(2,:)+1)/filterSpacing); 
+% % % % % +1 from the extra meshgrid point during the meshing of the DVC algorithm. EBK (10-23-2013)
+% % % % 
+% % % % for i = 1:3
+% % % %     u{i} = u{i}(1+unpadSize(1,1):end-unpadSize(2,1),...
+% % % %         1+unpadSize(1,2):end-unpadSize(2,2),...
+% % % %         1+unpadSize(1,3):end-unpadSize(2,3));
+% % % % end
+% % % % u{4} = sqrt(u{1}.^2 + u{2}.^2 + u{3}.^2);
+% % % % 
+% % % % cc = cc(1+unpadSize(1,1):end-unpadSize(2,1),...
+% % % %     1+unpadSize(1,2):end-unpadSize(2,2),...
+% % % %     1+unpadSize(1,3):end-unpadSize(2,3));
+filterSpacing = finalsSize/2;
 u{4} = sqrt(u{1}.^2 + u{2}.^2 + u{3}.^2);
-
-cc = cc(1+unpadSize(1,1):end-unpadSize(2,1),...
-    1+unpadSize(1,2):end-unpadSize(2,2),...
-    1+unpadSize(1,3):end-unpadSize(2,3));
+for i = 1:3
+    m{i} = m{i}-padSize(1,i)-filterSpacing(i);
+end
 
 end
