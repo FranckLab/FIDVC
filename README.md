@@ -61,7 +61,7 @@ Please refer to [input 3D Image Stack Requirements](https://github.com/FranckLab
 
 **Can I use FIDVC for finding displacement fields in 2D images?**
 
-No. But you can use [FIDIC](https://github.com/FranckLab/FIDIC), this is 2D version of FIDVC for finding displacments in 2D images. 
+No. But you can use [qDIC](https://github.com/FranckLab/qDIC), this is 2D version of FIDVC for finding displacments in 2D images. 
 
 ## Cite
 If used please cite:
