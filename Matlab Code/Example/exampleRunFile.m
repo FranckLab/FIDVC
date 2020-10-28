@@ -3,7 +3,7 @@
 % the deformation are defined as a four-pole Gaussian prescribed
 % displacement field.  See below for distriub
 %
-% Central z (x_3) plane. Number denots width of gaussian in voxels.  See
+% Central z (x_3) plane. Number denotes width of gaussian in voxels.  See
 % section 3.1 and 3.2 in Bar-Kochba et al. (2014)
 % --------------------------
 % |                        |
