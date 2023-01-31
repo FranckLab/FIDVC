@@ -2,7 +2,7 @@ The Fast Iterative Digital Volume Correlation Algorithm (FIDVC) is the next gene
 
 ### Important pages
 * [Download latest version v1.2.4!](https://github.com/FranckLab/FIDVC/releases)
-* [Example data](https://drive.google.com/folderview?id=0ByhZqlrbo5srSmU2ZW1TOXpfVkE&usp=sharing)
+* [Example data](https://app.globus.org/file-manager?origin_id=86401693-5974-4013-b498-eb4484e08eb4&origin_path=%2FFranckLab%2FFIDVC_example%2F)
 * [FAQ](https://github.com/FranckLab/FIDVC#faq)
 * [Questions/Issues](https://github.com/FranckLab/FIDVC/issues)
 * [Bug Fixes/history](https://github.com/FranckLab/FIDVC/wiki/Bug-Fixes!)
@@ -25,7 +25,7 @@ To run you need a compatible C compiler. Please see
 
 ### Running included example case
 1. Make sure that the main files and the supplemental m files (from file exchange) are added to the path in Matlab.
-2. Download and save the [example volume data](https://drive.google.com/drive/folders/1pMzcwc340bVwQJwb8dYyCEJNO1R4CEC2?usp=sharing) in the example folder. 
+2. Download and save the [example volume data](https://app.globus.org/file-manager?origin_id=86401693-5974-4013-b498-eb4484e08eb4&origin_path=%2FFranckLab%2FFIDVC_example%2F) in the example folder. 
 3. Run the exampleRunFile.m file to and compare its displacement outputs to the contour plots in the referenced paper ([Bar-Kochba, Toyjanova et al., Exp. Mechanics, 2014](http://link.springer.com/article/10.1007/s11340-014-9874-2?sa_campaign=email/event/articleAuthor/onlineFirst))
 
 ### Health warning!
